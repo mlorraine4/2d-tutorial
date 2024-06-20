@@ -1,10 +1,10 @@
-[gd_scene load_steps=42 format=3 uid="uid://cp5eicqaxo5v3"]
+[gd_scene load_steps=44 format=3 uid="uid://cp5eicqaxo5v3"]
 
 [ext_resource type="Texture2D" uid="uid://c64dd7axp54ad" path="res://Art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_5k18x"]
 [ext_resource type="Script" path="res://Characters/player_cat.gd" id="1_34yhu"]
 [ext_resource type="Texture2D" uid="uid://cyr5bt5b78lkv" path="res://Art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Actions-notools.png" id="2_psw8n"]
+[ext_resource type="Resource" uid="uid://c14lq802ahorh" path="res://Objects/Inventory/player_inventory.tres" id="2_um5dg"]
 [ext_resource type="Texture2D" uid="uid://bryd503tlnr01" path="res://Art/Sprout Lands - Sprites - Basic pack/Characters/Tools.png" id="3_74tgq"]
-[ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="5_oeja7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seqpn"]
 size = Vector2(14, 6)
@@ -946,6 +946,16 @@ advance_condition = &"swing"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tkbto"]
 switch_mode = 2
 advance_mode = 2
+advance_expression = "movement_mode == MovementModes.IDLE"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xx8rr"]
+advance_mode = 2
+advance_condition = &"swing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fkodu"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "movement_mode == MovementModes.WALK"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_4xkc6"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_82kgl")
@@ -955,7 +965,7 @@ states/Swing/node = SubResource("AnimationNodeBlendSpace2D_n2vpk")
 states/Swing/position = Vector2(416, -1)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_k15mh")
 states/Walk/position = Vector2(513, 100)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_t3lis"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_1wi34"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_evhl4"), "Idle", "Swing", SubResource("AnimationNodeStateMachineTransition_fh8y0"), "Swing", "Idle", SubResource("AnimationNodeStateMachineTransition_tkbto")]
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_t3lis"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_1wi34"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_evhl4"), "Idle", "Swing", SubResource("AnimationNodeStateMachineTransition_fh8y0"), "Swing", "Idle", SubResource("AnimationNodeStateMachineTransition_tkbto"), "Walk", "Swing", SubResource("AnimationNodeStateMachineTransition_xx8rr"), "Swing", "Walk", SubResource("AnimationNodeStateMachineTransition_fkodu")]
 graph_offset = Vector2(-273, -168.777)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4de8"]
@@ -964,6 +974,7 @@ size = Vector2(0.883903, 2.3812)
 [node name="PlayerCat" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_34yhu")
+inventory = ExtResource("2_um5dg")
 
 [node name="SP_Body" type="Sprite2D" parent="."]
 scale = Vector2(1.00381, 1)
@@ -1009,8 +1020,3 @@ frame = 13
 position = Vector2(-3.2838, -2.29777)
 scale = Vector2(6.14593, 2.26964)
 shape = SubResource("RectangleShape2D_e4de8")
-
-[node name="CharacterStateMachine" type="Node" parent="."]
-script = ExtResource("5_oeja7")
-
-[node name="Node" type="Node" parent="CharacterStateMachine"]

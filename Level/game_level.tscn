@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://chboj8hhkd05s"]
+[gd_scene load_steps=17 format=3 uid="uid://chboj8hhkd05s"]
 
 [ext_resource type="PackedScene" uid="uid://cp5eicqaxo5v3" path="res://Characters/player_cat.tscn" id="1_0s808"]
 [ext_resource type="Texture2D" uid="uid://ms2800p1l45g" path="res://Art/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_qpsmb"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c14vnpddrwb0g" path="res://Characters/player_cow.tscn" id="7_456vg"]
 [ext_resource type="PackedScene" uid="uid://dfpyy0oe6eckt" path="res://Objects/chests.tscn" id="8_poaap"]
 [ext_resource type="PackedScene" uid="uid://2wpn7jgb3cv0" path="res://Objects/sb_rock.tscn" id="9_4tns6"]
+[ext_resource type="PackedScene" uid="uid://tkie6782g8dp" path="res://Objects/Inventory/inventory_ui.tscn" id="10_bkw8y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lyao"]
 texture = ExtResource("2_qpsmb")
@@ -630,6 +631,10 @@ position = Vector2(-56, 41)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerCat"]
 remote_path = NodePath("../../Camera2D")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PlayerCat"]
+
+[node name="Inventory_UI" parent="PlayerCat/CanvasLayer" instance=ExtResource("10_bkw8y")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1vlak")

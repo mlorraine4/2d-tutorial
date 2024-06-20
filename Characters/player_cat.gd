@@ -4,6 +4,8 @@ enum MovementModes {
 	WALK
 }
 
+@export var inventory : Inventory
+
 #@export makes variable visible to inspector
 @export var move_speed : float = 100
 
@@ -30,7 +32,6 @@ func _physics_process(_delta):
 	else:
 		set_velocity(Vector2.ZERO)
 	
-	print_debug("velocity:", velocity)
 	# Move and Slide function uses velocity of character body to move character on map
 	move_and_slide()
 	
@@ -40,7 +41,6 @@ func update_animation_parameters():
 	var real_velocity = get_real_velocity()
 	if real_velocity.length()/move_speed < .07:
 		real_velocity = Vector2.ZERO
-	print_debug("Real velocity:", real_velocity.length()/move_speed)
 	
 	#determine if player is idle, walking, or pressed swing
 	if real_velocity == Vector2.ZERO:
