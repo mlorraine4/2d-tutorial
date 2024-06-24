@@ -1,19 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://2wpn7jgb3cv0"]
+[gd_scene load_steps=5 format=3 uid="uid://2wpn7jgb3cv0"]
 
+[ext_resource type="Script" path="res://Objects/ResourceNode.gd" id="1_evy8i"]
 [ext_resource type="Texture2D" uid="uid://bauxnyjg4opia" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png" id="1_wmqqi"]
+[ext_resource type="Resource" uid="uid://b530q8sbwm5vf" path="res://Objects/minable.tres" id="2_mkyo1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrmjw"]
 size = Vector2(14, 8)
 
-[node name="SB_Rock" type="StaticBody2D"]
+[node name="ResourceNode_Rock" type="StaticBody2D"]
+script = ExtResource("1_evy8i")
+node_types = Array[Resource("res://Objects/ResourceNodeType.gd")]([ExtResource("2_mkyo1")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(133, 67)
-shape = SubResource("RectangleShape2D_yrmjw")
-
-[node name="SP_Rock" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(133, 64)
 texture = ExtResource("1_wmqqi")
 hframes = 3
 vframes = 2
 frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(133, 67)
+shape = SubResource("RectangleShape2D_yrmjw")

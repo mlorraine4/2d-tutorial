@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Equippable_Item" load_steps=2 format=3 uid="uid://ssdiqbjqo4jq"]
+
+[ext_resource type="Script" path="res://Items/equippable_item.gd" id="1_e1pv8"]
+
+[resource]
+script = ExtResource("1_e1pv8")
+display_name = "Pickaxe"

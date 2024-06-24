@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HarvestingTool" load_steps=4 format=3 uid="uid://bci2kaq8bbek4"]
+
+[ext_resource type="Resource" uid="uid://b530q8sbwm5vf" path="res://Objects/minable.tres" id="1_68bk5"]
+[ext_resource type="Script" path="res://Items/harvesting_tool.gd" id="1_ef2uk"]
+[ext_resource type="Texture2D" uid="uid://dk54a2ap204yb" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Tools/axe.png" id="2_78lt6"]
+
+[resource]
+script = ExtResource("1_ef2uk")
+min_damage = 1
+max_damage = 1
+effected_nodes = Array[Resource("res://Objects/ResourceNodeType.gd")]([ExtResource("1_68bk5")])
+texture = ExtResource("2_78lt6")
+display_name = "Axe"
