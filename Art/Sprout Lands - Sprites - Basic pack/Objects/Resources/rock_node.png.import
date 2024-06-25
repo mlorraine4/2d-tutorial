@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bguqfgbecqmli"
-path="res://.godot/imported/wood.png-e5632d21f020c7a832f896ffb31f4fff.ctex"
+uid="uid://c6gf1v6i067n6"
+path="res://.godot/imported/rock_node.png-80132e351783f375005117fdf1c6d20c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Tools/wood.png"
-dest_files=["res://.godot/imported/wood.png-e5632d21f020c7a832f896ffb31f4fff.ctex"]
+source_file="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Resources/rock_node.png"
+dest_files=["res://.godot/imported/rock_node.png-80132e351783f375005117fdf1c6d20c.ctex"]
 
 [params]
 
