@@ -1,5 +1,7 @@
 extends CharacterBody2D
 #@export makes variable visible to inspector
+class_name Player
+
 @export var move_speed : float = 100
 
 @onready var animation_tree = $AnimationTree

@@ -1073,7 +1073,7 @@ graph_offset = Vector2(0, -56.7769)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4de8"]
 size = Vector2(0.883903, 2.3812)
 
-[node name="PlayerCat" type="CharacterBody2D"]
+[node name="PlayerCat" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_34yhu")
 

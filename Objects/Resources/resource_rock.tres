@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bf5lhefunqvc8" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Resources/rock.png" id="2_td2b0"]
 
 [resource]
+resource_name = "Rock"
 script = ExtResource("1_xyh4i")
 display_name = "Rock"
 texture = ExtResource("2_td2b0")

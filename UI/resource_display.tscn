@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyphdku1e1nxo"]
+
+[ext_resource type="Script" path="res://UI/resource_display.gd" id="1_rs3qp"]
+[ext_resource type="PackedScene" uid="uid://bfc52xqf7hjwd" path="res://UI/resource_item_display.tscn" id="2_oi5cp"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_right = 57.0
+offset_bottom = 43.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_rs3qp")
+item_display_template = ExtResource("2_oi5cp")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 5

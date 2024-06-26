@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceItem" load_steps=3 format=3 uid="uid://bncpx5s1vdd58"]
+
+[ext_resource type="Script" path="res://Objects/Resources/resource_item.gd" id="1_4k8gw"]
+[ext_resource type="Texture2D" uid="uid://bguqfgbecqmli" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Resources/wood.png" id="2_21nhb"]
+
+[resource]
+resource_name = "Wood"
+script = ExtResource("1_4k8gw")
+display_name = "Wood"
+texture = ExtResource("2_21nhb")
