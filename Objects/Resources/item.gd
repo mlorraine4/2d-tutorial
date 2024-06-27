@@ -1,6 +1,6 @@
 extends Resource
 
-class_name Equippable_Item
+class_name Item
 
 @export var texture : Texture2D
 @export var display_name : String

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equippable_Item" load_steps=3 format=3 uid="uid://cjs82xm0or2td"]
 
-[ext_resource type="Script" path="res://Items/equippable_item.gd" id="1_e1rgk"]
+[ext_resource type="Script" path="res://Equippable/equippable_item.gd" id="1_e1rgk"]
 [ext_resource type="Texture2D" uid="uid://dhl6jo5t4w8vw" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Tools/hoe.png" id="2_hd6xa"]
 
 [resource]

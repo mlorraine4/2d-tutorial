@@ -1,4 +1,4 @@
-extends Equippable_Item
+extends EquippableItem
 
 class_name HarvestingTool
 

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cyr5bt5b78lkv" path="res://Art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Actions-notools.png" id="2_psw8n"]
 [ext_resource type="Texture2D" uid="uid://dk54a2ap204yb" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Tools/axe.png" id="4_43yq1"]
 [ext_resource type="Script" path="res://Characters/SpriteEquip.gd" id="5_yrwwa"]
-[ext_resource type="Resource" uid="uid://bci2kaq8bbek4" path="res://Items/pickaxe.tres" id="6_e72f7"]
+[ext_resource type="Resource" uid="uid://c3imdxiscw4pn" path="res://Equippable/axe.tres" id="6_ydgch"]
 [ext_resource type="Script" path="res://Characters/Inventory.gd" id="7_vojwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seqpn"]
@@ -40,7 +40,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteEquip:position")
+tracks/2/path = NodePath("HandEquip:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -52,7 +52,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteEquip:scale")
+tracks/3/path = NodePath("HandEquip:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -64,7 +64,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteEquip:rotation")
+tracks/4/path = NodePath("HandEquip:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -100,7 +100,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteEquip:z_index")
+tracks/7/path = NodePath("HandEquip:z_index")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -377,7 +377,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteEquip:position")
+tracks/4/path = NodePath("HandEquip:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -389,7 +389,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("SpriteEquip:scale")
+tracks/5/path = NodePath("HandEquip:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -401,7 +401,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("SpriteEquip:rotation")
+tracks/6/path = NodePath("HandEquip:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -413,7 +413,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteEquip:z_index")
+tracks/7/path = NodePath("HandEquip:z_index")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -454,7 +454,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteEquip:position")
+tracks/2/path = NodePath("HandEquip:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -466,7 +466,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteEquip:scale")
+tracks/3/path = NodePath("HandEquip:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -478,7 +478,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteEquip:rotation")
+tracks/4/path = NodePath("HandEquip:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -514,7 +514,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteEquip:z_index")
+tracks/7/path = NodePath("HandEquip:z_index")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -543,7 +543,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteEquip:position")
+tracks/1/path = NodePath("HandEquip:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -555,7 +555,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteEquip:scale")
+tracks/2/path = NodePath("HandEquip:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -567,7 +567,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteEquip:rotation")
+tracks/3/path = NodePath("HandEquip:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -615,7 +615,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteEquip:z_index")
+tracks/7/path = NodePath("HandEquip:z_index")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -656,7 +656,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteEquip:position")
+tracks/2/path = NodePath("HandEquip:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -668,7 +668,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteEquip:scale")
+tracks/3/path = NodePath("HandEquip:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -680,7 +680,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteEquip:rotation")
+tracks/4/path = NodePath("HandEquip:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -716,7 +716,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteEquip:z_index")
+tracks/7/path = NodePath("HandEquip:z_index")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1103,17 +1103,17 @@ parameters/Idle/blend_position = Vector2(0, 0.809251)
 parameters/Swing/blend_position = Vector2(-1, 0.00582004)
 parameters/Walk/blend_position = Vector2(-0.217621, -0.0989418)
 
-[node name="SpriteEquip" type="Sprite2D" parent="."]
+[node name="HandEquip" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(-9, 0)
 scale = Vector2(-1, 1)
 texture = ExtResource("4_43yq1")
 script = ExtResource("5_yrwwa")
-equipped_item = ExtResource("6_e72f7")
+equipped_item = ExtResource("6_ydgch")
 
-[node name="Area2D" type="Area2D" parent="SpriteEquip"]
+[node name="Area2D" type="Area2D" parent="HandEquip"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpriteEquip/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandEquip/Area2D"]
 position = Vector2(-3.2838, -2.29777)
 scale = Vector2(6.14593, 2.26964)
 shape = SubResource("RectangleShape2D_e4de8")
@@ -1121,4 +1121,4 @@ shape = SubResource("RectangleShape2D_e4de8")
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("7_vojwl")
 
-[connection signal="body_entered" from="SpriteEquip/Area2D" to="SpriteEquip" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="HandEquip/Area2D" to="HandEquip" method="_on_area_2d_body_entered"]
