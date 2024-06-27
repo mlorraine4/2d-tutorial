@@ -10,4 +10,4 @@ min_damage = 1
 max_damage = 1
 effected_nodes = Array[Resource("res://Objects/ResourceNodeType.gd")]([ExtResource("1_murdk")])
 texture = ExtResource("3_hxnrh")
-display_name = "Axe"
+display_name = "Pickaxe"
