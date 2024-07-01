@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceItem" load_steps=3 format=3 uid="uid://bc0kafkp3dwhk"]
+
+[ext_resource type="Script" path="res://Objects/Resources/resource_item.gd" id="1_sakvq"]
+[ext_resource type="Texture2D" uid="uid://c6dwjpjhhy1gi" path="res://Art/Mine/tea_bush_purple.png" id="2_8ok76"]
+
+[resource]
+resource_name = "Purple Tea Leaves"
+script = ExtResource("1_sakvq")
+display_name = "Purple Tea Leaves"
+texture = ExtResource("2_8ok76")

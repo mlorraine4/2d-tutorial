@@ -422,6 +422,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [1]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquip/Area2D:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.2001, 0.2002, 0.2003, 0.2004, 0.2005, 0.2006, 0.2007, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, true, true, true, true, true, true, false]
+}
 
 [sub_resource type="Animation" id="Animation_p8u5w"]
 resource_name = "swing_left"
@@ -522,6 +534,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [-1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquip/Area2D:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_1w6si"]
@@ -624,6 +648,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [-1]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquip/Area2D:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
 
 [sub_resource type="Animation" id="Animation_vapa6"]
 resource_name = "swing_up"
@@ -724,6 +760,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [-1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquip/Area2D:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_virui"]
@@ -1118,7 +1166,16 @@ position = Vector2(-3.2838, -2.29777)
 scale = Vector2(6.14593, 2.26964)
 shape = SubResource("RectangleShape2D_e4de8")
 
+[node name="Area2D" type="Area2D" parent="HandEquip/Area2D"]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandEquip/Area2D/Area2D"]
+position = Vector2(-3.2838, -2.29777)
+scale = Vector2(6.14593, 2.26964)
+shape = SubResource("RectangleShape2D_e4de8")
+
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("7_vojwl")
 
 [connection signal="body_entered" from="HandEquip/Area2D" to="HandEquip" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="HandEquip/Area2D/Area2D" to="HandEquip" method="_on_area_2d_body_entered"]

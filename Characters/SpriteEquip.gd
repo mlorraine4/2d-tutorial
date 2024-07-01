@@ -1,3 +1,4 @@
+@tool
 extends Sprite2D
 
 class_name HandEquip
@@ -9,7 +10,12 @@ class_name HandEquip
 		self.texture = next_equipped.texture
 		print("setting new equipped item " + next_equipped.display_name)
 
+func _ready():
+	if(not Engine.is_editor_hint()):
+		equip_hitbox.monitoring = false
+	
 #func connected to the area2D, interact with body comes from harvesting_tool, which is a script for pickaxe resource
 func _on_area_2d_body_entered(body):
-	if(equipped_item.has_method("interact_with_body")):
-		equipped_item.interact_with_body(body)
+	if(not Engine.is_editor_hint()):
+		if(equipped_item.has_method("interact_with_body")):
+			equipped_item.interact_with_body(body)

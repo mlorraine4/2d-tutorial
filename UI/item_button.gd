@@ -16,6 +16,7 @@ func _ready():
 		connect("pressed", _on_pressed)
 
 func _on_pressed():
+	#makes sure doesn't run in editor only in game
 	if(not Engine.is_editor_hint()):
 		if(item is EquippableItem):
 			if(hand_equip != null):

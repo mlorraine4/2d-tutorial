@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3gh6yuvsnb1n"]
+
+[ext_resource type="Script" path="res://Objects/ResourceNode.gd" id="1_wyhlr"]
+[ext_resource type="Resource" uid="uid://c42qt8y16ed8" path="res://Objects/axeable.tres" id="2_noplp"]
+[ext_resource type="PackedScene" uid="uid://btbsmpg4fc60u" path="res://Objects/Resources/Pickups/pickup_tea_bush_purple.tscn" id="3_fbxxb"]
+[ext_resource type="Texture2D" uid="uid://c6dwjpjhhy1gi" path="res://Art/Mine/tea_bush_purple.png" id="4_8jxy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrmjw"]
+size = Vector2(18, 17)
+
+[node name="Wood_Node" type="StaticBody2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_wyhlr")
+node_types = Array[Resource("res://Objects/ResourceNodeType.gd")]([ExtResource("2_noplp")])
+starting_resources = 5
+pickup_type = ExtResource("3_fbxxb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("4_8jxy6")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3.5)
+shape = SubResource("RectangleShape2D_yrmjw")
