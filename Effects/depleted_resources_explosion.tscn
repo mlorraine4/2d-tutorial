@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://jrqi48xg05q4"]
+
+[ext_resource type="Script" path="res://Effects/depleted_resources_explosion.gd" id="1_0k3o7"]
+
+[sub_resource type="Gradient" id="Gradient_oeqjk"]
+offsets = PackedFloat32Array(0, 0.72973, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_bqlsm"]
+gradient = SubResource("Gradient_oeqjk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dt81g"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 60.0
+gravity = Vector3(0, 0, 0)
+damping_min = 50.0
+damping_max = 50.0
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_bqlsm")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_v7oq8"]
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_dt81g")
+texture = SubResource("CanvasTexture_v7oq8")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+script = ExtResource("1_0k3o7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.55
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

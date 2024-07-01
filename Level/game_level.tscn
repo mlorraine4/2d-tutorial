@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://chboj8hhkd05s"]
+[gd_scene load_steps=21 format=3 uid="uid://chboj8hhkd05s"]
 
 [ext_resource type="PackedScene" uid="uid://cp5eicqaxo5v3" path="res://Characters/player_cat.tscn" id="1_0s808"]
 [ext_resource type="Texture2D" uid="uid://ms2800p1l45g" path="res://Art/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_qpsmb"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://2wpn7jgb3cv0" path="res://Objects/Resources/rock_node.tscn" id="9_4tns6"]
 [ext_resource type="PackedScene" uid="uid://05014aro7oai" path="res://Objects/Resources/wood_node.tscn" id="10_0261t"]
 [ext_resource type="PackedScene" uid="uid://cyphdku1e1nxo" path="res://UI/resource_display.tscn" id="10_yonu2"]
+[ext_resource type="PackedScene" uid="uid://jrqi48xg05q4" path="res://Effects/depleted_resources_explosion.tscn" id="11_454a8"]
 [ext_resource type="PackedScene" uid="uid://cg5viw5fyte7r" path="res://UI/tool_hotbar.tscn" id="12_1r4ft"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lyao"]
@@ -743,6 +744,9 @@ position = Vector2(-96, 119)
 
 [node name="Wood_Node2" parent="." instance=ExtResource("10_0261t")]
 position = Vector2(-38, 88)
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("11_454a8")]
+position = Vector2(126, 80)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

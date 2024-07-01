@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://05014aro7oai"]
+[gd_scene load_steps=7 format=3 uid="uid://05014aro7oai"]
 
 [ext_resource type="Script" path="res://Objects/ResourceNode.gd" id="1_ss4lt"]
 [ext_resource type="Resource" uid="uid://c42qt8y16ed8" path="res://Objects/axeable.tres" id="2_16o41"]
 [ext_resource type="PackedScene" uid="uid://258vm4ttpx7m" path="res://Objects/Resources/Pickups/pickup_wood.tscn" id="3_noqm1"]
+[ext_resource type="PackedScene" uid="uid://jrqi48xg05q4" path="res://Effects/depleted_resources_explosion.tscn" id="4_1aq6x"]
 [ext_resource type="Texture2D" uid="uid://bx3mgli2knseh" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Resources/wood_node.png" id="4_6dk5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrmjw"]
@@ -14,6 +15,7 @@ script = ExtResource("1_ss4lt")
 node_types = Array[Resource("res://Objects/ResourceNodeType.gd")]([ExtResource("2_16o41")])
 starting_resources = 5
 pickup_type = ExtResource("3_noqm1")
+depleted_effect = ExtResource("4_1aq6x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
